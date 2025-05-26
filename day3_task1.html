@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image in Marquee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            font-weight: bold;
+        }
+        .content {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        marquee img {
+            height: 200px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Image in Marquee</h2>
+
+    <div class="content">
+        On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document.
+        You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks.
+        When you create pictures, charts, or diagrams, they also coordinate with your current document look. You can easily change 
+        the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery
+        on the Home tab. You can also change the look of the entire document by choosing a new theme from the Themes gallery on the
+        Page Layout tab. The theme you choose determines the colors, fonts, and effects used in your document.      
+    </div>
+    <marquee direction="right">
+        <img
+            src="https://placehold.co/300x50/FF8C00/FFFFFF?text=Hurry!+Get+50%25+Off!"
+            alt="Special Offer: Hurry! Get 50% off offer valid only till today evening!"
+            class="marquee-image"
+            onerror="this.onerror=null;this.src='https://placehold.co/300x50/CCCCCC/000000?text=Offer+Image+Error';"
+        >
+    </marquee>
+
+</body>
+</html>
