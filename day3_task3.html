@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Appointment Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            align-items: flex-start;
+            padding: 40px;
+        }
+        .image-container {
+            flex: 1;
+            padding-right: 40px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .form-container {
+            flex: 2;
+        }
+        h2 {
+            text-align: center;
+            border-bottom: 2px solid crimson;
+            padding-bottom: 10px;
+            color: #222;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="date"], input[type="time"], input[type="tel"], textarea {
+            padding: 5px;
+            width: 200px;
+        }
+        .half-width {
+            width: 100px;
+        }
+        textarea {
+            height: 60px;
+            width: 300px;
+        }
+        .gender-options, .appointment-types {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .appointment-types {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 10px;
+        }
+        .submit-btn {
+            margin-left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?semt=ais_hybrid&w=740" alt="Doctor">
+        </div>
+        <div class="form-container">
+            <h2>Doctor Appointment Form</h2>
+            <form>
+                <div class="form-row">
+                    <label for="date">Appointment Date</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div class="form-row">
+                    <label for="time">Appointment Time</label>
+                    <input type="time" id="time" name="time">
+                </div>
+                <div class="form-row">
+                    <label>Name</label>
+                    <input type="text" placeholder="First" class="half-width">
+                    <input type="text" placeholder="Last" class="half-width" style="margin-left: 10px;">
+                </div>
+                <div class="form-row">
+                    <label>Gender</label>
+                    <div class="gender-options">
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="#####">
+                </div>
+                <div class="form-row">
+                    <label>Address</label>
+                    <input type="text" placeholder="city">
+                    <input type="text" placeholder="state" style="margin-left: 10px;">
+                </div>
+                <div class="form-row">
+                    <label>Your Query</label>
+                    <textarea></textarea>
+                </div>
+                <div class="form-row">
+                    <label>Appointment Type</label>
+                    <div class="appointment-types">
+                        <p>Select which appointment type(s) you require</p>
+                        <label><input type="checkbox"> Cervix checkup</label>
+                        <label><input type="checkbox"> Heart checkup</label>
+                        <label><input type="checkbox"> Eye check-up</label>
+                        <label><input type="checkbox"> Hearing Test</label>
+                    </div>
+                </div>
+                <div class="submit-btn">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
